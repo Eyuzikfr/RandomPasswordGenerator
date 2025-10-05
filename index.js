@@ -135,11 +135,16 @@ function generatePassword() {
 
 function setPasswordLength() {
   console.log(passwordLength);
-  passwordLength = parseInt(inputPasswordLength.value);
-  if (!passwordLength || passwordLength < 8) {
-    window.alert("Length value must be a number( 8 or higher).");
+  const testPasswordLength = parseInt(inputPasswordLength.value);
+  if (
+    !testPasswordLength ||
+    testPasswordLength < 8 ||
+    testPasswordLength > 32
+  ) {
+    window.alert("Length value must be a number between 8 and 32.");
   } else {
     window.alert("Password length set successfully!");
+    passwordLength = testPasswordLength;
   }
 }
 
