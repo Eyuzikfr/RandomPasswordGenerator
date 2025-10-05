@@ -109,6 +109,7 @@ const setPasswordLengthBtn = document.getElementById("set-password-length-btn");
 const inputPasswordLength = document.getElementById("password-length");
 const includeNumbersCheckBox = document.getElementById("include-numbers");
 const includeSymbolsCheckBox = document.getElementById("include-symbols");
+const passwordLengthSpan = document.getElementById("password-length-span");
 
 let includeNumbers = includeNumbersCheckBox.checked;
 let includeSymbols = includeSymbolsCheckBox.checked;
@@ -145,6 +146,7 @@ function setPasswordLength() {
   } else {
     window.alert("Password length set successfully!");
     passwordLength = testPasswordLength;
+    passwordLengthSpan.textContent = passwordLength;
   }
 }
 

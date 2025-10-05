@@ -55,6 +55,12 @@ body {
 
 .password-section {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.password-containers {
+  display: flex;
   gap: 20px;
 }
 
@@ -112,4 +118,10 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.password-length-display {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f8f8f8;
 }
